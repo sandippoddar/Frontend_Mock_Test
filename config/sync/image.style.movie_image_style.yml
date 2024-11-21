@@ -1,0 +1,14 @@
+uuid: 25b4d68c-8528-4b59-95b0-c1e80d26aede
+langcode: en
+status: true
+dependencies: {  }
+name: movie_image_style
+label: 'Movie Image Style'
+effects:
+  da2b9c1e-c769-452c-b06d-f9350de7d682:
+    uuid: da2b9c1e-c769-452c-b06d-f9350de7d682
+    id: image_resize
+    weight: 1
+    data:
+      width: 560
+      height: 320

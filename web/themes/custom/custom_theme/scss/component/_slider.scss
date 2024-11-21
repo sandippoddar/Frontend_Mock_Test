@@ -1,0 +1,49 @@
+@use '../partial/importer' as *;
+.banner-slider {
+  height: 700px;
+  align-items: center;
+  background-image: url(../Images/pexels-daniel-rocha-messias-1593704734-29488872.jpg);
+  background-position: cover;
+  background-repeat: no-repeat;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.3;
+  }
+  .arrow-left, .arrow-right {
+    position: relative;
+    cursor: pointer;
+  }
+  i {
+    color: $brand-secondary-color;
+    font-size: 3rem;
+  }
+  &__content {
+    position: relative;
+    height: 700px;
+  }
+  &__elements {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    h1, p, a {
+      color: $brand-secondary-color;
+    }
+    h1 {
+      font-size: 3rem;
+      letter-spacing: 5px;
+    }
+    button {
+      padding: 10px 15px;
+      background: transparent;
+      border: 1px solid $brand-secondary-color;
+    }
+  }
+}
