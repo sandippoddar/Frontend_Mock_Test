@@ -1,0 +1,23 @@
+name: mock-test
+recipe: drupal10
+config:
+  webroot: web
+  php: 8.1
+  via: nginx
+services:
+  node:
+    type: node
+    build:
+      - npm install
+      - gulp
+    globals:
+      gulp-cli: latest
+tooling:
+  npm:
+    service: node
+  node:
+    service: node
+  gulp:
+    service: node
+  yarn:
+    service: node
