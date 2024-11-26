@@ -2,18 +2,19 @@
 (function ($, Drupal, once) {
   Drupal.behaviors.slider = {
     attach: function (context, settings) {
-      const $sliderDiv = $('.banner-slider');
+      const $sliderDiv = $('.view-banner-slide .view-content');
       once('movieSlider', $sliderDiv, context).forEach(function (element) {
-        $(context).find('.banner-slider').slick({
+        $(context).find('.view-banner-slide .view-content').slick({
           infinite: false,
           slidesToShow: 1,
           slidesToScroll: 1,
-          autoplay: true,
-          autoplaySpeed: 3000,
+          // autoplay: true,
+          // autoplaySpeed: 3000,
           draggable: false,
           prevArrow: '<div class="arrow-left"><i class="bi bi-chevron-left"></i></div>',
           nextArrow: '<div class="arrow-right"><i class="bi bi-chevron-right"></i></div>',
-          dots: true
+          dots: true,
+          cssEase: 'linear'
         });
       });
     }

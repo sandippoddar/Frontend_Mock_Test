@@ -97,9 +97,9 @@ set footer_classes = ' ' ~
   set content_classes = (page.sidebar_first and page.sidebar_second) ? 'col-12 col-lg-6' : ((page.sidebar_first or page.sidebar_second) ? 'col-12 col-lg-9' : 'col-12' )
    %}
 
-  {{ attach_library('custom_theme/movie-slider') }}
+  {# {{ attach_library('custom_theme/movie-slider') }} #}
   
-  <div class="banner-slider d-flex">
+  {# <div class="banner-slider d-flex">
     <div class="banner-slider__content">
       <div class="banner-slider__elements">
         <p>Slide 1</p>
@@ -122,7 +122,12 @@ set footer_classes = ' ' ~
         <button><a href="#">Tell Me More</a></button>
       </div>
     </div>
-  </div>
+  </div> #}
+  {% if page.banner %}
+    <div class="order-1 order-lg-2">
+      {{ page.banner }}
+    </div>
+  {% endif %}
 
   <div class="{{ b5_top_container }}">
     {% if page.breadcrumb %}
